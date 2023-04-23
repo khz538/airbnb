@@ -4,8 +4,11 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
 import { useCallback, useState } from 'react';
+import useRegisterModal from '../hooks/useRegisterModal';
+import RegisterModal from '../modals/RegisterModal';
 
 const UserMenu = () => {
+    const registerModal = useRegisterModal();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = useCallback(() => setIsOpen(value => !value), []);
@@ -13,6 +16,7 @@ const UserMenu = () => {
     return (
         <div className="relative">
             <div className="flex flex-row items-center gap-3">
+                {/* Penultimate button "Airbnb your home" */}
                 <div
                     onClick={() => {}}
                     className="
@@ -73,7 +77,7 @@ const UserMenu = () => {
                     <div className='flex flex-col cursor-pointer'>
                         <>
                             <MenuItem
-                                onClick={() => {}}
+                                onClick={registerModal.onOpen}
                                 label="Sign up"
                             />
                             <MenuItem
