@@ -88,7 +88,7 @@ export const categories = [
         description: "Experience the finer things in life."
     },
 
-]
+];
 
 const Categories = () => {
     const params = useSearchParams();

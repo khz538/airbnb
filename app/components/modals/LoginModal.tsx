@@ -4,8 +4,8 @@ import { useCallback, useState } from "react"
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import { FcGoogle } from 'react-icons/fc';
 import axios from 'axios';
-import useRegisterModal from "../hooks/useRegisterModal";
-import useLoginModal from "../hooks/useLoginModal";
+import useRegisterModal from "../../hooks/useRegisterModal";
+import useLoginModal from "../../hooks/useLoginModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
@@ -54,6 +54,11 @@ const LoginModal = () => {
         }
     });
   }
+
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div className="flex flex-col gap-5">
@@ -106,7 +111,7 @@ const LoginModal = () => {
       >
         <div className="flex flex-row items-center gap-2 justify-center">
           <div>
-            Already have an account?
+            First time using Airbnb?
           </div>
           <div
             className="
@@ -114,9 +119,9 @@ const LoginModal = () => {
               cursor-pointer
               hover:underline
             "
-            onClick={registerModal.onClose}
+            onClick={toggle}
           >
-            Log in
+            Create an account!
           </div>
         </div>
       </div>
