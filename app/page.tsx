@@ -1,3 +1,6 @@
+export const dynamic="force-dynamic";
+
+
 import Container from "@/app/components/Container";
 import ListingCard from "@/app/components/listings/ListingCard";
 import EmptyState from "@/app/components/EmptyState";
@@ -7,6 +10,7 @@ import getListings, {
 } from "@/app/actions/getListings";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
+
 
 interface HomeProps {
   searchParams: IListingsParams
