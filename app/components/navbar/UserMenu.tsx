@@ -34,7 +34,7 @@ const UserMenu: FC<UserMenuProps> = ({
         if (!currentUser) return loginModal.onOpen();
         // open rent modal
         rentModal.onOpen();
-    }, [currentUser, loginModal]);
+    }, [currentUser, loginModal, rentModal]);
 
     return (
         <div className="relative">
