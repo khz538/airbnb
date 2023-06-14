@@ -27,6 +27,7 @@ const Calendar: React.FC<CalendarProps> = ({
             showDateDisplay={false}
             minDate={new Date()}
             disabledDates={disabledDates}
+            fixedHeight={true}
         />
     )
 }
