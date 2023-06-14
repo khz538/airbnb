@@ -7,7 +7,7 @@ Visit [the live site](https://notbnb.vercel.app/) or clone this repository and r
 ## Local installation
 1. Clone the repo to your machine
 2. In the root directory, run `npm i`
-3. Fill in the environment variables in accordance with .env.example
+3. Fill in the environment variables in accordance with `.env.example`
 4. run `npm run dev` to start the development server
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
