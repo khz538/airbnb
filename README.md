@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Visit [the live site](https://notbnb.vercel.app/) or clone this repository and run it locally on your machine!
 
-# Local installation
+## Local installation
 1. Clone the repo to your machine
 2. In the root directory, run `npm i`
 3. run `npm run dev` to start the development server
